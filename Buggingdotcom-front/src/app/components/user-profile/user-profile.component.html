@@ -1,0 +1,15 @@
+<div class="centered">
+  <h1>Your profile:</h1>
+  <p>Firstname: {{ currentProfile === 1 ? this.adminProfile.first_name : this.guestProfile.first_name }}</p>
+  <p>Lastname: {{  currentProfile === 1 ? this.adminProfile.last_name : this.guestProfile.last_name }}</p>
+  <p>Phone number: {{ currentProfile === 1 ? this.adminProfile.phone_no : this.guestProfile.phone_no }}</p>
+  <p>Email: {{ currentProfile === 1 ? this.adminProfile.email : this.guestProfile.email }}</p>
+  <p>Role: {{ currentProfile === 1 ? 'Hotel admin' : 'Guest' }}</p>
+  <button mat-raised-button
+          color="primary"
+          class="button"
+          (click)="navigateToAnotherPage()"
+          *ngIf="currentProfile === 1">
+    {{ this.showHotelButtonFun() ? 'Add hotel' : 'Edit hotel' }}
+  </button>
+</div>

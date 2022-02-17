@@ -1,0 +1,11 @@
+mat-card {
+  width: 66%;
+  left: 16.5%;
+  margin-top: 16px;
+}
+
+a {
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 100%;
+}

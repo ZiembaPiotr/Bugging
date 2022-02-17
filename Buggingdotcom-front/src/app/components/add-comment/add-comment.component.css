@@ -1,0 +1,15 @@
+mat-form-field {
+  width: 66%;
+  left: 16.5%;
+  margin-top: 16px;
+}
+
+mat-slider {
+  margin-top: 0;
+  width: 66%;
+  left: 16.5%;
+}
+
+button {
+  right: -20%;
+}

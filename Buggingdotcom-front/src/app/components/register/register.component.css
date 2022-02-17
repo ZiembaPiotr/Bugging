@@ -1,0 +1,36 @@
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div {
+  color: white;
+}
+
+span {
+  top: -10px;
+  color: red;
+}
+
+mat-form-field {
+  width: 300px;
+}
+
+p {
+  margin-bottom: -10px;
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 50px;
+}
+
+mat-checkbox {
+  margin-left: 60px;
+}
+
+mat-slider {
+  width: 300px;
+}

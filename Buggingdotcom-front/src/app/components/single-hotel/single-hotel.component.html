@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-title-group>
+    <mat-card-title>{{ this.getName() }}</mat-card-title>
+    <mat-card-subtitle>{{ this.getLocation() }}</mat-card-subtitle>
+    <div style="position: relative; right: 0%;">
+      <fa-icon
+        *ngFor="let x of getNumberOfStars()"
+        [icon]="faStar"
+      ></fa-icon>
+    </div>
+  </mat-card-title-group>
+  <img mat-card-image src="/assets/images/siema.png">
+  <mat-card-content>
+    <h1>Rooms:</h1>
+    <app-room-list
+      [rooms]="this.rooms"
+    ></app-room-list>
+  </mat-card-content>
+  <mat-card-content>
+    <h1>Opinions:</h1>
+    <app-opinion-list
+      [hotelId]="this.hotelId"
+      [opinions]="this.opinions"
+    ></app-opinion-list>
+  </mat-card-content>
+</mat-card>

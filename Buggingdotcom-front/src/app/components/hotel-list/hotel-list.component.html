@@ -1,0 +1,5 @@
+<app-hotel
+  *ngFor="let hotel of hotels"
+  [hotel]="hotel"
+  (onSearchHotel)="searchForHotel(hotel)"
+></app-hotel>

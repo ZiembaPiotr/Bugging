@@ -1,0 +1,16 @@
+<form>
+  <mat-form-field appearance="outline">
+    <mat-label>Your comment</mat-label>
+    <textarea matInput
+              cdkTextareaAutosize
+              required
+              cdkAutosizeMinRows="1"
+              cdkAutosizeMaxRows="10"
+              name="comment"
+              id="comment"
+              [(ngModel)]="opinion">
+    </textarea>
+  </mat-form-field>
+  <mat-slider #matSlider [(ngModel)]="sliderValue" id="sliderValue" name="sliderValue" min="1" max="5" step="1.0" value="1.0"></mat-slider>
+  <button mat-raised-button color="primary" (click)="submit()">Add your opinion</button>
+</form>

@@ -1,0 +1,96 @@
+<h1 class="centered" style="color: white;">Register:</h1>
+<div class="centered">
+  <form name="register-form" (ngSubmit)="onSubmit()">
+    <p style="margin-top: 30px;">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          id="email"
+          matInput
+          email
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Firstname</mat-label>
+        <input
+          maxlength="50"
+          type="text"
+          name="firstname"
+          [(ngModel)]="firstname"
+          id="firstname"
+          matInput
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Lastname</mat-label>
+        <input
+          maxlength="50"
+          type="text"
+          name="lastname"
+          [(ngModel)]="lastname"
+          id="lastname"
+          matInput
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone number</mat-label>
+        <input
+          maxlength="9"
+          minlength="9"
+          type="number"
+          name="phoneNumber"
+          [(ngModel)]="phoneNumber"
+          id="phoneNumber"
+          matInput
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          maxlength="30"
+          minlength="5"
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          id="password"
+          matInput
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Repeat your password</mat-label>
+        <input
+          maxlength="30"
+          minlength="5"
+          type="password"
+          name="passwordRpt"
+          [(ngModel)]="passwordRpt"
+          id="passwordRpt"
+          matInput
+        />
+      </mat-form-field>
+    </p>
+    <span *ngIf="passwordRpt !== password">Passwords doesn't match</span>
+    <p>
+      <mat-checkbox [checked]="selected === 1" (change)="selected = 1">Guest</mat-checkbox>
+      <mat-checkbox [checked]="selected === 2" (change)="selected = 2">Admin</mat-checkbox>
+    </p>
+    <span *ngIf="selected === -1">Role must be set!</span>
+    <input style="margin-top: 30px; margin-left: 90px;"
+           type="submit"
+           class="mat-raised-button mat-primary"
+           value="Register"/>
+  </form>
+</div>

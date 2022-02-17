@@ -1,0 +1,19 @@
+.button {
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+}
+
+.button2 {
+  width: 256px;
+  margin-top: -20px;
+  padding: 0;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+

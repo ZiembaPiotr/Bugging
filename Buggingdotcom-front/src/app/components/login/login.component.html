@@ -1,0 +1,38 @@
+<h1 class="centered" style="color: white">Log in as a Guest:</h1>
+<div class="centered">
+  <form name="login-form" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+    <p style="margin-top: 30px;">
+      <mat-form-field style="width: 300px" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          formControlName="email"
+          type="text"
+          name="email"
+          [(ngModel)]="email"
+          id="email"
+          matInput
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field style="width: 300px" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          formControlName="password"
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          id="password"
+          matInput
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <button style="margin-left: 50px" mat-raised-button color="primary" [disabled]="loading" class="mat-button">
+        <span *ngIf="loading"></span>
+        Login
+      </button>
+      <a style="margin-left: 50px" class="mat-raised-button mat-primary" routerLink="/register">Register </a>
+    </p>
+  </form>
+</div>

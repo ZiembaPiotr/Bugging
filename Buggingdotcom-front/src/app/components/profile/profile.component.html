@@ -1,0 +1,10 @@
+<div *ngIf="currentUser() !== 3">
+  <app-user-profile [currentProfile]="currentUser()"
+                    [adminProfile]="adminProfile"
+                    [guestProfile]="guestProfile"
+  ></app-user-profile>
+  <app-delete-hotel (onDelete)="deleteHotel($event)"></app-delete-hotel>
+</div>
+<div *ngIf="currentUser() === 3">
+  <app-profile-not-found></app-profile-not-found>
+</div>

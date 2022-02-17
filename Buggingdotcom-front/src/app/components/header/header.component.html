@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button class="home" routerLink="/">Bugging.com</button>
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="loginGuest">Log in as a Guest</button>
+      <button mat-menu-item routerLink="loginAdmin">Log in as a Hotel Admin</button>
+      <button mat-menu-item routerLink="register">Register</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

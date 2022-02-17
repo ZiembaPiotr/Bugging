@@ -1,0 +1,5 @@
+<app-opinion
+  *ngFor="let opinion of opinions"
+  [opinion]="opinion"
+></app-opinion>
+<app-add-comment (onAddOpinion)="addOpinion($event)" [hotelId]="this.hotelId"></app-add-comment>
