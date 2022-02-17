@@ -1,0 +1,1 @@
+\c "host=localhost user=gafini dbname=bugging port=5432"
